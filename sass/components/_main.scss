@@ -1,0 +1,10 @@
+@use '../abstracts';
+
+body {
+    background: abstracts.$main-bg;
+    color: abstracts.$main-text;
+    padding: 5vh 5vw;
+    @include abstracts.sm {
+        padding: 10vh 10vw;
+    }
+}

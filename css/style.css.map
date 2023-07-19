@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../sass/abstracts/_mixins.scss","../sass/components/_main.scss","../sass/abstracts/_colors.scss","../sass/style.scss"],"names":[],"mappings":"AA2DI;EAEI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGJ;EACI;;AAGJ;EACI;EACA;;;AC9ER;EACI,YCHM;EDIN,OCHQ;EDIR;;ADSA;ECZJ;IAKQ;;;;AELR;EACI;EACA;EACA","file":"style.css"}
