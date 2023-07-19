@@ -20,6 +20,7 @@
 }
 
 header {
+  background: #ddd;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +85,6 @@ header .toggle img {
   position: absolute;
   inset: 0;
   top: 0.25rem;
-  width: 80%;
   height: 80%;
   transition: 0.25s;
 }

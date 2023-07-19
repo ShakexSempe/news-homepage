@@ -1,7 +1,7 @@
 @use '../abstracts';
 
 header {
-    // background: red;
+    background: #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +70,7 @@ header {
             position: absolute;
             inset: 0;
             top: .25rem;
-            width: 80%;
+            // width: 100%;
             height: 80%;
             transition: .25s;
             &.close {
