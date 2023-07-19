@@ -1,0 +1,93 @@
+@use '../abstracts';
+
+header {
+    // background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 6vh;
+    padding: 1rem 5vw;
+    width: 100%;
+    @include abstracts.md {
+        padding: 0;
+        // border: 2px solid red;
+        position: sticky;
+        top: 0;
+    }
+    .logo {
+        img {
+            width: 2.5rem;
+        }
+    }
+
+    nav {
+        // MOBILE NAVBAR
+        @media (max-width: 768px){
+
+            position: absolute;
+            background: #fff;
+            top: 6vh;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            transition: .5s;
+            
+            ul {
+                flex-direction: column;
+                position: relative;
+                top: 15vh;
+                left: 5vw;
+            }
+            &.active {
+                right: -30vw;
+            }
+        }
+
+        // DESKTOP NAVBAR
+        position: relative;
+        right: 0;
+        // border: 2px solid red;
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            list-style: none;
+        }
+    }
+
+    .toggle {
+        @include abstracts.md {
+            display: none;
+        }
+        // border: 3px solid blue;
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        img {
+            position: absolute;
+            inset: 0;
+            top: .25rem;
+            width: 80%;
+            height: 80%;
+            transition: .25s;
+            &.close {
+                opacity: 0;
+            }
+        }
+        
+        &.active {
+            img {
+                &.open {
+                    opacity: 0;
+                }
+                &.close {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+}
