@@ -12,10 +12,10 @@ header {
     padding: 1.5rem 5vw;
     width: 100%;
     z-index: 10;
-    @include abstracts.md {
-        padding: 2rem 0;
-        position: sticky;
-        top: -.12rem;
+    @include abstracts.xlg {
+        padding: 2rem 10vw;
+        // position: sticky;
+        // top: -.12rem;
     }
     .logo {
         img {
@@ -25,7 +25,7 @@ header {
 
     nav {
         // MOBILE NAVBAR
-        @media (max-width: 768px){
+        @media (max-width: 1024px){
             position: absolute;
             background: #fff;
             top: 0;
@@ -53,7 +53,7 @@ header {
         }
 
         // DESKTOP NAVBAR
-        @include abstracts.md {
+        @include abstracts.xlg {
             position: relative;
             right: 0;
             // border: 2px solid red;
@@ -69,7 +69,7 @@ header {
 
     .toggle {
         z-index: 5;
-        @include abstracts.md {
+        @include abstracts.xlg {
             display: none;
         }
         // border: 3px solid blue;

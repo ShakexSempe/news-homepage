@@ -43,17 +43,15 @@ header {
   width: 100%;
   z-index: 10;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   header {
-    padding: 2rem 0;
-    position: sticky;
-    top: -0.12rem;
+    padding: 2rem 10vw;
   }
 }
 header .logo img {
   width: 2.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   header nav {
     position: absolute;
     background: #fff;
@@ -79,7 +77,7 @@ header .logo img {
     right: -30vw;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   header nav {
     position: relative;
     right: 0;
@@ -97,7 +95,7 @@ header .toggle {
   width: 2.5rem;
   height: 2.5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   header .toggle {
     display: none;
   }

@@ -89,13 +89,15 @@ main {
             @include abstracts.xlg {
                 // border: 1px solid red;
                 flex-direction: row;
-                justify-content: start;
+                justify-content: space-between;
+                align-items: start;
+                gap: 3rem;
 
                 .flex-container {
                     flex-direction: column;
-                    // justify-content: space-between;
-                    padding: 0 1rem;
-
+                    // flex-basis: 70%;
+                    border: 1px solid red;
+                    // padding-left: 3rem;
                 }
             }
 
@@ -134,7 +136,7 @@ main {
                 }
                 &::after {
                     background: abstracts.$blue-darkest;
-                    box-shadow: 0 .25rem .25rem #000;
+                    box-shadow: 0 .25rem .25rem #0002;
                     opacity: 0;
                 }
                 @media (max-width: 768px) {
@@ -149,6 +151,7 @@ main {
                 @media (min-width: 768.1px) {
                     cursor: pointer;
                     &:hover {
+                        transform: scale(.98);
                         &::before {opacity: 0;}
                         &::after {opacity: 1;}
                     }
@@ -179,6 +182,7 @@ main {
             .card-item {
                 padding: 2rem .5rem 2rem 0;
                 border-bottom: 1px solid #fff6;
+                cursor: pointer;
                 &:last-child {
                     border-bottom: none;
                 }
@@ -186,9 +190,16 @@ main {
                 h4 {
                     font-size: 1.25rem;
                     margin-bottom: .5rem;
+                    transition: .25s;
                 }
                 p {
                     font-weight: 400;
+                }
+
+                &:hover {
+                    h4 {
+                        color: abstracts.$brand-orange;
+                    }
                 }
             }
 
@@ -220,7 +231,8 @@ main {
     }
 
     .item-content {
-
+        cursor: pointer;
+        
         h3 {
             font-size: 2rem;
             font-weight: 800;
@@ -232,11 +244,20 @@ main {
         h4 {
             font-size: 1.125rem;
             margin-bottom: 1rem;
+            transition: .125s;
         }
         
         p {
             padding-right: .5rem;
             color: abstracts.$blue-dark;
+        }
+    }
+
+    &:hover {
+        .item-content {
+            h4 {
+                color: abstracts.$brand-red;
+            }
         }
     }
 

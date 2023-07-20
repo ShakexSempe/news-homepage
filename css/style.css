@@ -112,11 +112,13 @@ main {
 @media (min-width: 1024px) {
   .top-section .left-section .left-content {
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
+    align-items: start;
+    gap: 3rem;
   }
   .top-section .left-section .left-content .flex-container {
     flex-direction: column;
-    padding: 0 1rem;
+    border: 1px solid red;
   }
 }
 .top-section .left-section .left-content h2 {
@@ -153,7 +155,7 @@ main {
 }
 .top-section .left-section .left-content .btn::after {
   background: #00001a;
-  box-shadow: 0 0.25rem 0.25rem #000;
+  box-shadow: 0 0.25rem 0.25rem #0002;
   opacity: 0;
 }
 @media (max-width: 768px) {
@@ -174,6 +176,9 @@ main {
 @media (min-width: 768.1px) {
   .top-section .left-section .left-content .btn {
     cursor: pointer;
+  }
+  .top-section .left-section .left-content .btn:hover {
+    transform: scale(0.98);
   }
   .top-section .left-section .left-content .btn:hover::before {
     opacity: 0;
@@ -200,6 +205,7 @@ main {
 .top-section .right-section .card .card-item {
   padding: 2rem 0.5rem 2rem 0;
   border-bottom: 1px solid #fff6;
+  cursor: pointer;
 }
 .top-section .right-section .card .card-item:last-child {
   border-bottom: none;
@@ -207,9 +213,13 @@ main {
 .top-section .right-section .card .card-item h4 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  transition: 0.25s;
 }
 .top-section .right-section .card .card-item p {
   font-weight: 400;
+}
+.top-section .right-section .card .card-item:hover h4 {
+  color: #e9ab53;
 }
 
 .bottom-section {
@@ -236,6 +246,9 @@ main {
     width: 30%;
   }
 }
+.bottom-item .item-content {
+  cursor: pointer;
+}
 .bottom-item .item-content h3 {
   font-size: 2rem;
   font-weight: 800;
@@ -246,10 +259,14 @@ main {
 .bottom-item .item-content h4 {
   font-size: 1.125rem;
   margin-bottom: 1rem;
+  transition: 0.125s;
 }
 .bottom-item .item-content p {
   padding-right: 0.5rem;
   color: #5d5f79;
+}
+.bottom-item:hover .item-content h4 {
+  color: #f15e50;
 }
 
 header {
@@ -265,17 +282,15 @@ header {
   width: 100%;
   z-index: 10;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   header {
-    padding: 2rem 0;
-    position: sticky;
-    top: -0.12rem;
+    padding: 2rem 10vw;
   }
 }
 header .logo img {
   width: 2.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   header nav {
     position: absolute;
     background: #fff;
@@ -301,7 +316,7 @@ header .logo img {
     right: -30vw;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   header nav {
     position: relative;
     right: 0;
@@ -319,7 +334,7 @@ header .toggle {
   width: 2.5rem;
   height: 2.5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   header .toggle {
     display: none;
   }
