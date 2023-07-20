@@ -1,7 +1,7 @@
 @use '../abstracts';
 
 header {
-    background: #ddd;
+    background: abstracts.$main-bg;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,6 +55,7 @@ header {
             flex-direction: row;
             gap: 2rem;
             list-style: none;
+
         }
     }
 

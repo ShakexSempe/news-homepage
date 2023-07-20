@@ -4,12 +4,22 @@
 body {
     background: abstracts.$main-bg;
     color: abstracts.$main-text;
+    font-size: 15px;
+}
+
+
+a {
+    text-decoration: none;
+    color: abstracts.$main-text;
+    &:hover {
+        color: abstracts.$brand-orange;
+    }
 }
 
 .container {
     max-width: 100%;
     min-height: 100vh;
-    border: 2px solid red;
+    // border: 2px solid red;
     padding: 5vh 5vw;
     @include abstracts.md {
         padding: 10vh 10vw;
@@ -17,28 +27,29 @@ body {
 }
 
 main {
-    // border: 2px solid blue;
-    // height: 60vh;
     margin-top: 5vh;
 }
 
 .top-section {
-    // border: 2px solid red;
+    // outline: 4px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 10vh;
     // DESKTOP
     @include abstracts.lg {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         gap: 2rem;
+        margin-bottom: 15vh;
+
     }
 
     .left-section {
-        // border: 2px solid green;
-        display:flex;
-        flex-direction: column;
+        // border: 2px solid blue;
+        display: grid;
         gap: 1rem;
-        // DESKTOP
-        @include abstracts.lg {
-        }
 
         img {
             height: 100%;
@@ -48,13 +59,18 @@ main {
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            .flex-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+            }
             @include abstracts.lg {
                 // border: 1px solid red;
                 flex-direction: row;
                 justify-content: start;
 
                 .flex-container {
-                    display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     padding: 0 1rem;
@@ -63,11 +79,15 @@ main {
 
             h2 {
                 font-size: 2.5rem;
+                font-weight: 800;
             }
             
+            p {
+                color: abstracts.$blue-dark;
+            }
 
             a {
-                background: orange;
+                background: abstracts.$brand-red;
                 color: #fff;
                 display: block;
                 width: max-content;
@@ -85,17 +105,35 @@ main {
         }
 
         .card {
-            background: #000;
+            background: abstracts.$blue-darkest;
+            color: #fff;
             padding: 1rem;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-around;
 
             h3 {
-                color: pink;
-                font-size: 2rem
+                color: abstracts.$brand-orange;
+                font-size: 2rem;
             }
+
+            .card-item {
+                padding: 2rem 0;
+                border-bottom: 1px solid #fff6;
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                h4 {
+                    font-size: 1.25rem;
+                    margin-bottom: .5rem;
+                }
+                p {
+                    font-weight: 400;
+                }
+            }
+
         }
 
 
@@ -104,5 +142,48 @@ main {
 
 .bottom-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    @include abstracts.md {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.bottom-item {
+    display: flex;
+    gap: 1rem;
+
+    img {
+        width: 30%;
+        object-fit: cover;
+        @include abstracts.md {
+            width: 30%;
+        }
+    }
+
+    .item-content {
+        // border: 2px solid red;
+        // padding-block: .5rem;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: .025rem;
+            color: abstracts.$blue-light;
+            margin-bottom: .5rem;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            // max-width: 220px;
+            padding-right: .5rem;
+            color: abstracts.$blue-dark;
+        }
+    }
+
+    
 }

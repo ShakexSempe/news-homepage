@@ -19,8 +19,19 @@
   opacity: 0;
 }
 
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 header {
-  background: #ddd;
+  background: #fafafa;
   display: flex;
   justify-content: space-between;
   align-items: center;
