@@ -80,9 +80,9 @@ header {
         img {
             position: absolute;
             inset: 0;
-            top: .25rem;
+            top: .5rem;
             // width: 100%;
-            height: 80%;
+            // height: 80%;
             transition: .25s;
             &.close {
                 opacity: 0;

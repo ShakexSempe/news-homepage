@@ -288,8 +288,7 @@ header .toggle {
 header .toggle img {
   position: absolute;
   inset: 0;
-  top: 0.25rem;
-  height: 80%;
+  top: 0.5rem;
   transition: 0.25s;
 }
 header .toggle img.close {
