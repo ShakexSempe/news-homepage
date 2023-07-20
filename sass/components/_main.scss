@@ -83,7 +83,7 @@ main {
             .flex-container {
                 display: flex;
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
 
             }
             @include abstracts.lg {
@@ -111,17 +111,18 @@ main {
                 background: abstracts.$brand-red;
                 color: #fff;
                 display: block;
-                width: 10rem;
+                width: 12rem;
                 text-align: center;
                 text-transform: uppercase;
-                letter-spacing: .125rem;
+                letter-spacing: .25rem;
                 font-size: .85rem;
-                padding: .5rem 1rem;
+                padding: 1rem;
                 transition: .25s;
                 box-shadow: 0 .25rem .25rem #0002;
                 &:hover {
                     background: abstracts.$blue-darkest;
                 }
+                
             }
 
         }
