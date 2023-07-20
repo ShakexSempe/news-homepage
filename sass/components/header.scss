@@ -9,14 +9,13 @@ header {
     top: 0;
     right: 0;
     height: 6vh;
-    padding: 1rem 5vw;
+    padding: 1.5rem 5vw;
     width: 100%;
     z-index: 10;
     @include abstracts.md {
-        padding: 0;
-        // border: 2px solid red;
+        padding: 2rem 0;
         position: sticky;
-        top: 0;
+        top: -.12rem;
     }
     .logo {
         img {
@@ -75,14 +74,14 @@ header {
         }
         // border: 3px solid blue;
         position: relative;
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
         img {
             position: absolute;
             inset: 0;
-            top: .5rem;
-            // width: 100%;
-            // height: 80%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
             transition: .25s;
             &.close {
                 opacity: 0;
