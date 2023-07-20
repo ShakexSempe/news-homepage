@@ -1,12 +1,14 @@
 @use '../abstracts';
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background: abstracts.$main-bg;
     color: abstracts.$main-text;
     font-size: 15px;
 }
-
 
 a {
     text-decoration: none;
@@ -19,10 +21,29 @@ a {
 .container {
     max-width: 100%;
     min-height: 100vh;
-    // border: 2px solid red;
     padding: 5vh 5vw;
+    position: relative;
     @include abstracts.md {
         padding: 10vh 10vw;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        // left: -105vw;
+        // opacity: 1;
+        background: #0006;
+        transition: .125s;
+        z-index: 1;
+        display: none;
+    }
+
+    &.active {
+        &::after {
+            display: block;
+        }
     }
 }
 
@@ -35,7 +56,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 10vh;
     margin-bottom: 10vh;
     // DESKTOP
     @include abstracts.lg {
@@ -90,8 +111,17 @@ main {
                 background: abstracts.$brand-red;
                 color: #fff;
                 display: block;
-                width: max-content;
+                width: 10rem;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: .125rem;
+                font-size: .85rem;
                 padding: .5rem 1rem;
+                transition: .25s;
+                box-shadow: 0 .25rem .25rem #0002;
+                &:hover {
+                    background: abstracts.$blue-darkest;
+                }
             }
 
         }
@@ -109,9 +139,6 @@ main {
             color: #fff;
             padding: 1rem;
             height: 100%;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: space-around;
 
             h3 {
                 color: abstracts.$brand-orange;
@@ -119,7 +146,7 @@ main {
             }
 
             .card-item {
-                padding: 2rem 0;
+                padding: 2rem .5rem 2rem 0;
                 border-bottom: 1px solid #fff6;
                 &:last-child {
                     border-bottom: none;

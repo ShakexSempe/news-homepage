@@ -30,6 +30,10 @@ img {
   max-width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #fafafa;
   color: #00001a;
@@ -48,11 +52,25 @@ a:hover {
   max-width: 100%;
   min-height: 100vh;
   padding: 5vh 5vw;
+  position: relative;
 }
 @media (min-width: 768px) {
   .container {
     padding: 10vh 10vw;
   }
+}
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: #0006;
+  transition: 0.125s;
+  z-index: 1;
+  display: none;
+}
+.container.active::after {
+  display: block;
 }
 
 main {
@@ -63,7 +81,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 10vh;
   margin-bottom: 10vh;
 }
 @media (min-width: 820px) {
@@ -113,8 +131,17 @@ main {
   background: #f15e50;
   color: #fff;
   display: block;
-  width: max-content;
+  width: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  font-size: 0.85rem;
   padding: 0.5rem 1rem;
+  transition: 0.25s;
+  box-shadow: 0 0.25rem 0.25rem #0002;
+}
+.top-section .left-section .left-content a:hover {
+  background: #00001a;
 }
 @media (min-width: 820px) {
   .top-section .right-section {
@@ -132,7 +159,7 @@ main {
   font-size: 2rem;
 }
 .top-section .right-section .card .card-item {
-  padding: 2rem 0;
+  padding: 2rem 0.5rem 2rem 0;
   border-bottom: 1px solid #fff6;
 }
 .top-section .right-section .card .card-item:last-child {
@@ -197,6 +224,7 @@ header {
   height: 6vh;
   padding: 1rem 5vw;
   width: 100%;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   header {

@@ -11,6 +11,7 @@ header {
     height: 6vh;
     padding: 1rem 5vw;
     width: 100%;
+    z-index: 10;
     @include abstracts.md {
         padding: 0;
         // border: 2px solid red;
