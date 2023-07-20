@@ -127,10 +127,8 @@ main {
 .top-section .left-section .left-content p {
   color: #5d5f79;
 }
-.top-section .left-section .left-content a {
-  background: #f15e50;
+.top-section .left-section .left-content .btn {
   color: #fff;
-  display: block;
   width: 12rem;
   text-align: center;
   text-transform: uppercase;
@@ -138,10 +136,52 @@ main {
   font-size: 0.85rem;
   padding: 1rem;
   transition: 0.25s;
-  box-shadow: 0 0.25rem 0.25rem #0002;
+  position: relative;
+  isolation: isolate;
 }
-.top-section .left-section .left-content a:hover {
+.top-section .left-section .left-content .btn::before, .top-section .left-section .left-content .btn:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.25s;
+  z-index: -1;
+}
+.top-section .left-section .left-content .btn::before {
+  background: #f15e50;
+  box-shadow: 0 0.5rem 0.5rem #0001;
+}
+.top-section .left-section .left-content .btn::after {
   background: #00001a;
+  box-shadow: 0 0.25rem 0.25rem #000;
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  .top-section .left-section .left-content .btn {
+    cursor: default;
+  }
+  .top-section .left-section .left-content .btn:active {
+    transform: scale(0.98);
+    letter-spacing: 0.225rem;
+  }
+  .top-section .left-section .left-content .btn:active::before {
+    opacity: 0;
+  }
+  .top-section .left-section .left-content .btn:active::after {
+    opacity: 1;
+  }
+}
+@media (min-width: 768.1px) {
+  .top-section .left-section .left-content .btn {
+    cursor: pointer;
+  }
+  .top-section .left-section .left-content .btn:hover::before {
+    opacity: 0;
+  }
+  .top-section .left-section .left-content .btn:hover::after {
+    opacity: 1;
+  }
 }
 @media (min-width: 820px) {
   .top-section .right-section {
