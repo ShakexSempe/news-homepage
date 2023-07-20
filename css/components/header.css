@@ -52,37 +52,46 @@ header {
 header .logo img {
   width: 2.5rem;
 }
-header nav {
-  position: relative;
-  right: 0;
-}
 @media (max-width: 768px) {
   header nav {
     position: absolute;
     background: #fff;
-    top: 6vh;
+    top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
     transition: 0.5s;
   }
   header nav ul {
+    display: flex;
     flex-direction: column;
+    gap: 2rem;
     position: relative;
     top: 15vh;
     left: 5vw;
+    list-style: none;
+  }
+  header nav ul li {
+    font-size: 1.125rem;
   }
   header nav.active {
     right: -30vw;
   }
 }
-header nav ul {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  list-style: none;
+@media (min-width: 768px) {
+  header nav {
+    position: relative;
+    right: 0;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+  }
 }
 header .toggle {
+  z-index: 5;
   position: relative;
   width: 2rem;
   height: 2rem;
