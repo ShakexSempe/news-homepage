@@ -118,12 +118,15 @@ main {
   }
   .top-section .left-section .left-content .flex-container {
     flex-direction: column;
+    justify-content: space-between;
     border: 1px solid red;
+    height: 100%;
   }
 }
 .top-section .left-section .left-content h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 800;
+  line-height: 1;
 }
 .top-section .left-section .left-content p {
   color: #5d5f79;
@@ -213,7 +216,7 @@ main {
 .top-section .right-section .card .card-item h4 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  transition: 0.25s;
+  transition: 0.125s;
 }
 .top-section .right-section .card .card-item p {
   font-weight: 400;
