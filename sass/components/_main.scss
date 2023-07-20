@@ -23,7 +23,7 @@ a {
     min-height: 100vh;
     padding: 5vh 5vw;
     position: relative;
-    @include abstracts.md {
+    @include abstracts.xlg {
         padding: 10vh 10vw;
     }
 
@@ -48,7 +48,7 @@ a {
 }
 
 main {
-    margin-top: 5vh;
+    margin: 5vh auto;
 }
 
 .top-section {
@@ -59,7 +59,7 @@ main {
     gap: 10vh;
     margin-bottom: 10vh;
     // DESKTOP
-    @include abstracts.lg {
+    @include abstracts.xlg {
         flex-direction: row;
         justify-content: space-between;
         gap: 2rem;
@@ -86,15 +86,16 @@ main {
                 gap: 1.5rem;
 
             }
-            @include abstracts.lg {
+            @include abstracts.xlg {
                 // border: 1px solid red;
                 flex-direction: row;
                 justify-content: start;
 
                 .flex-container {
                     flex-direction: column;
-                    justify-content: space-between;
+                    // justify-content: space-between;
                     padding: 0 1rem;
+
                 }
             }
 
@@ -160,7 +161,7 @@ main {
     .right-section {
         // border: 2px solid purple;
 
-        @include abstracts.lg {
+        @include abstracts.xlg {
             width: 80%;
         }
 
@@ -201,7 +202,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    @include abstracts.md {
+    @include abstracts.xlg {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
@@ -211,16 +212,14 @@ main {
     gap: 1rem;
 
     img {
-        width: 30%;
+        width: 6rem;
         object-fit: cover;
-        @include abstracts.md {
+        @include abstracts.xlg {
             width: 30%;
         }
     }
 
     .item-content {
-        // border: 2px solid red;
-        // padding-block: .5rem;
 
         h3 {
             font-size: 2rem;
@@ -236,7 +235,6 @@ main {
         }
         
         p {
-            // max-width: 220px;
             padding-right: .5rem;
             color: abstracts.$blue-dark;
         }
