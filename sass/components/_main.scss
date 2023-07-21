@@ -235,7 +235,9 @@ main {
 
     .item-content {
         cursor: pointer;
-        
+        @include abstracts.xsm {
+            cursor: default;
+        }
         h3 {
             font-size: 2rem;
             font-weight: 800;
@@ -257,6 +259,7 @@ main {
     }
 
     &:hover {
+        
         .item-content {
             h4 {
                 color: abstracts.$brand-red;

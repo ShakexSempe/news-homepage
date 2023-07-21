@@ -252,6 +252,11 @@ main {
 .bottom-item .item-content {
   cursor: pointer;
 }
+@media (max-width: 450px) {
+  .bottom-item .item-content {
+    cursor: default;
+  }
+}
 .bottom-item .item-content h3 {
   font-size: 2rem;
   font-weight: 800;
