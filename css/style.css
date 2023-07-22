@@ -40,6 +40,10 @@ body {
   font-size: 15px;
 }
 
+p {
+  line-height: 1.8;
+}
+
 a {
   text-decoration: none;
   color: #00001a;
@@ -78,17 +82,14 @@ main {
 }
 
 .top-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
   gap: 10vh;
   margin-bottom: 10vh;
 }
 @media (min-width: 1024px) {
   .top-section {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 65% auto;
     margin-bottom: 15vh;
   }
 }
@@ -119,7 +120,6 @@ main {
   .top-section .left-section .left-content .flex-container {
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid red;
     height: 100%;
   }
 }
@@ -190,11 +190,6 @@ main {
     opacity: 1;
   }
 }
-@media (min-width: 1024px) {
-  .top-section .right-section {
-    width: 80%;
-  }
-}
 .top-section .right-section .card {
   background: #00001a;
   color: #fff;
@@ -206,7 +201,7 @@ main {
   font-size: 2rem;
 }
 .top-section .right-section .card .card-item {
-  padding: 2rem 0.5rem 2rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid #fff6;
   cursor: pointer;
 }
@@ -220,6 +215,7 @@ main {
 }
 .top-section .right-section .card .card-item p {
   font-weight: 400;
+  color: #c5c6ce;
 }
 .top-section .right-section .card .card-item:hover h4 {
   color: #e9ab53;

@@ -10,6 +10,10 @@ body {
     font-size: 15px;
 }
 
+p {
+    line-height: 1.8;
+}
+
 a {
     text-decoration: none;
     color: abstracts.$main-text;
@@ -53,16 +57,13 @@ main {
 
 .top-section {
     // outline: 4px solid green;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
     gap: 10vh;
     margin-bottom: 10vh;
     // DESKTOP
     @include abstracts.xlg {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: 65% auto;
         margin-bottom: 15vh;
 
     }
@@ -97,7 +98,7 @@ main {
                     flex-direction: column;
                     justify-content: space-between;
                     // flex-basis: 70%;
-                    border: 1px solid red;
+                    // border: 1px solid red;
                     // padding-left: 3rem;
                     height: 100%;
                 }
@@ -168,7 +169,7 @@ main {
         // border: 2px solid purple;
 
         @include abstracts.xlg {
-            width: 80%;
+            // width: 80%;
         }
 
         .card {
@@ -183,7 +184,7 @@ main {
             }
 
             .card-item {
-                padding: 2rem .5rem 2rem 0;
+                padding: 2rem 0;
                 border-bottom: 1px solid #fff6;
                 cursor: pointer;
                 &:last-child {
@@ -197,6 +198,7 @@ main {
                 }
                 p {
                     font-weight: 400;
+                    color: abstracts.$blue-light;
                 }
 
                 &:hover {
