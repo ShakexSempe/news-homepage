@@ -229,7 +229,7 @@ main {
         width: 6rem;
         object-fit: cover;
         @include abstracts.xlg {
-            width: 30%;
+            width: 33%;
         }
     }
 
@@ -253,8 +253,9 @@ main {
         }
         
         p {
-            padding-right: .5rem;
+            // padding-right: .5rem;
             color: abstracts.$blue-dark;
+            line-height: 1.8;
         }
     }
 

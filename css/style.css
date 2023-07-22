@@ -246,7 +246,7 @@ main {
 }
 @media (min-width: 1024px) {
   .bottom-item img {
-    width: 30%;
+    width: 33%;
   }
 }
 .bottom-item .item-content {
@@ -270,8 +270,8 @@ main {
   transition: 0.125s;
 }
 .bottom-item .item-content p {
-  padding-right: 0.5rem;
   color: #5d5f79;
+  line-height: 1.8;
 }
 .bottom-item:hover .item-content h4 {
   color: #f15e50;
