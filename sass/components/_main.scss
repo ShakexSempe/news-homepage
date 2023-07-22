@@ -24,7 +24,6 @@ a {
 
 .container {
     max-width: 100%;
-    min-height: 100vh;
     padding: 5vh 5vw;
     position: relative;
     @include abstracts.xlg {
@@ -36,8 +35,6 @@ a {
         position: absolute;
         inset: 0;
         width: 100%;
-        // left: -105vw;
-        // opacity: 1;
         background: #0006;
         transition: .125s;
         z-index: 1;
@@ -65,53 +62,57 @@ main {
         display: grid;
         grid-template-columns: 65% auto;
         margin-bottom: 15vh;
-
+        gap: 5vw;
     }
 
     .left-section {
         // border: 2px solid blue;
         display: grid;
-        gap: 1rem;
+        gap: 2rem;
+        // grid-template-rows: auto 1fr;
+        @include abstracts.sm {
+            gap: 5vh;
+        }
 
         img {
             height: 100%;
         }
 
         .left-content {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 1rem;
+            @include abstracts.sm {
+            grid-template-columns: auto auto;
+            // border: 3px solid green;
+            }
             .flex-container {
+                // border: 1px solid red;
                 display: flex;
                 flex-direction: column;
-                gap: 1.5rem;
-
-            }
-            @include abstracts.xlg {
-                // border: 1px solid red;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: start;
-                gap: 3rem;
-
-                .flex-container {
+                justify-content: center;
+                gap: 1rem;
+                @include abstracts.xlg {
                     flex-direction: column;
                     justify-content: space-between;
-                    // flex-basis: 70%;
-                    // border: 1px solid red;
-                    // padding-left: 3rem;
-                    height: 100%;
                 }
+
             }
+            
 
             h2 {
-                font-size: 3.5rem;
+                font-size: 4vw;
+                font-size: 2.5rem;
+                font-size: clamp(2.5rem, 4vw, 3.5rem);
                 font-weight: 800;
                 line-height: 1;
             }
             
             p {
                 color: abstracts.$blue-dark;
+                @include abstracts.md {
+                    font-size: 1rem;
+                }
             }
 
             .btn {
@@ -175,12 +176,12 @@ main {
         .card {
             background: abstracts.$blue-darkest;
             color: #fff;
-            padding: 1rem;
+            padding: 1.5rem;
             height: 100%;
 
             h3 {
                 color: abstracts.$brand-orange;
-                font-size: 2rem;
+                font-size: 3rem;
             }
 
             .card-item {

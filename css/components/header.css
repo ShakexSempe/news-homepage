@@ -45,7 +45,7 @@ header {
 }
 @media (min-width: 1024px) {
   header {
-    padding: 2rem 10vw;
+    padding: 5vh 10vw;
   }
 }
 header .logo img {

@@ -54,7 +54,6 @@ a:hover {
 
 .container {
   max-width: 100%;
-  min-height: 100vh;
   padding: 5vh 5vw;
   position: relative;
 }
@@ -91,45 +90,57 @@ main {
     display: grid;
     grid-template-columns: 65% auto;
     margin-bottom: 15vh;
+    gap: 5vw;
   }
 }
 .top-section .left-section {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
+}
+@media (min-width: 576px) {
+  .top-section .left-section {
+    gap: 5vh;
+  }
 }
 .top-section .left-section img {
   height: 100%;
 }
 .top-section .left-section .left-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
+}
+@media (min-width: 576px) {
+  .top-section .left-section .left-content {
+    grid-template-columns: auto auto;
+  }
 }
 .top-section .left-section .left-content .flex-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1rem;
 }
 @media (min-width: 1024px) {
-  .top-section .left-section .left-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    gap: 3rem;
-  }
   .top-section .left-section .left-content .flex-container {
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
   }
 }
 .top-section .left-section .left-content h2 {
-  font-size: 3.5rem;
+  font-size: 4vw;
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 800;
   line-height: 1;
 }
 .top-section .left-section .left-content p {
   color: #5d5f79;
+}
+@media (min-width: 768px) {
+  .top-section .left-section .left-content p {
+    font-size: 1rem;
+  }
 }
 .top-section .left-section .left-content .btn {
   color: #fff;
@@ -193,12 +204,12 @@ main {
 .top-section .right-section .card {
   background: #00001a;
   color: #fff;
-  padding: 1rem;
+  padding: 1.5rem;
   height: 100%;
 }
 .top-section .right-section .card h3 {
   color: #e9ab53;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .top-section .right-section .card .card-item {
   padding: 2rem 0;
@@ -288,7 +299,7 @@ header {
 }
 @media (min-width: 1024px) {
   header {
-    padding: 2rem 10vw;
+    padding: 5vh 10vw;
   }
 }
 header .logo img {

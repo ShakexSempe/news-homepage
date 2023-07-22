@@ -13,9 +13,7 @@ header {
     width: 100%;
     z-index: 10;
     @include abstracts.xlg {
-        padding: 2rem 10vw;
-        // position: sticky;
-        // top: -.12rem;
+        padding: 5vh 10vw;
     }
     .logo {
         img {
