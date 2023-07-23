@@ -87,13 +87,14 @@ main {
             }
             .flex-container {
                 // border: 1px solid red;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                display: grid;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
                 gap: 1rem;
                 @include abstracts.xlg {
-                    flex-direction: column;
-                    justify-content: space-between;
+                    padding: 0 1rem;
+
                 }
 
             }
@@ -116,6 +117,9 @@ main {
             .btn {
                 color: #fff;
                 width: 12rem;
+                height: 3rem;
+                display: grid;
+                place-content: center;
                 text-align: center;
                 text-transform: uppercase;
                 letter-spacing: .25rem;
@@ -181,9 +185,11 @@ main {
             .card-item {
                 padding: 2rem 0;
                 border-bottom: 1px solid #fff6;
-                cursor: pointer;
                 &:last-child {
                     border-bottom: none;
+                }
+                @include abstracts.sm {
+                    cursor: pointer;
                 }
 
                 h4 {

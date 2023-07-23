@@ -116,15 +116,12 @@ main {
   }
 }
 .top-section .left-section .left-content .flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   gap: 1rem;
 }
 @media (min-width: 1024px) {
   .top-section .left-section .left-content .flex-container {
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 0 1rem;
   }
 }
 .top-section .left-section .left-content h2 {
@@ -144,6 +141,9 @@ main {
 .top-section .left-section .left-content .btn {
   color: #fff;
   width: 12rem;
+  height: 3rem;
+  display: grid;
+  place-content: center;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
@@ -213,10 +213,14 @@ main {
 .top-section .right-section .card .card-item {
   padding: 2rem 0;
   border-bottom: 1px solid #fff6;
-  cursor: pointer;
 }
 .top-section .right-section .card .card-item:last-child {
   border-bottom: none;
+}
+@media (min-width: 576px) {
+  .top-section .right-section .card .card-item {
+    cursor: pointer;
+  }
 }
 .top-section .right-section .card .card-item h4 {
   font-size: 1.25rem;
