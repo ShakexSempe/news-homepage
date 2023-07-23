@@ -69,7 +69,6 @@ main {
         // border: 2px solid blue;
         display: grid;
         gap: 2rem;
-        // grid-template-rows: auto 1fr;
         @include abstracts.sm {
             gap: 5vh;
         }
@@ -101,7 +100,6 @@ main {
             
 
             h2 {
-                font-size: 4vw;
                 font-size: 2.5rem;
                 font-size: clamp(2.5rem, 4vw, 3.5rem);
                 font-weight: 800;
@@ -169,14 +167,10 @@ main {
     .right-section {
         // border: 2px solid purple;
 
-        @include abstracts.xlg {
-            // width: 80%;
-        }
-
         .card {
             background: abstracts.$blue-darkest;
             color: #fff;
-            padding: 1.5rem;
+            padding: 1rem;
             height: 100%;
 
             h3 {
