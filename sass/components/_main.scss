@@ -49,11 +49,10 @@ a {
 }
 
 main {
-    margin: 5vh auto;
+    margin: 1rem auto;
 }
 
 .top-section {
-    // outline: 4px solid green;
     display: grid;
     gap: 10vh;
     margin-bottom: 10vh;
@@ -64,13 +63,11 @@ main {
         margin-bottom: 15vh;
         gap: 5vw;
     }
-
     .left-section {
-        // border: 2px solid blue;
         display: grid;
         gap: 2rem;
         @include abstracts.sm {
-            gap: 5vh;
+            gap: 2rem;
         }
 
         img {
@@ -85,12 +82,10 @@ main {
             grid-template-columns: auto auto;
             // border: 3px solid green;
             }
-            .flex-container {
-                // border: 1px solid red;
-                display: grid;
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
+            .content-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 gap: 1rem;
                 @include abstracts.xlg {
                     padding: 0 1rem;
@@ -102,7 +97,7 @@ main {
 
             h2 {
                 font-size: 2.5rem;
-                font-size: clamp(2.5rem, 4vw, 3.5rem);
+                font-size: clamp(2.5rem, 3.5vw, 3.5rem);
                 font-weight: 800;
                 line-height: 1;
             }
@@ -174,12 +169,13 @@ main {
         .card {
             background: abstracts.$blue-darkest;
             color: #fff;
-            padding: 1rem;
-            height: 100%;
+            padding: 1rem 1.5rem 1rem 1rem;
+            
 
             h3 {
                 color: abstracts.$brand-orange;
-                font-size: 3rem;
+                font-size: 2rem;
+                font-size: clamp(2rem, 2.8vw, 3rem);
             }
 
             .card-item {
