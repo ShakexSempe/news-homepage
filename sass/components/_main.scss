@@ -85,11 +85,11 @@ main {
             .content-container {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: center;
                 gap: 1rem;
                 @include abstracts.xlg {
+                    justify-content: space-between;
                     padding: 0 1rem;
-
                 }
 
             }
@@ -97,7 +97,7 @@ main {
 
             h2 {
                 font-size: 2.5rem;
-                font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+                font-size: clamp(2.5rem, 4vw, 3.5rem);
                 font-weight: 800;
                 line-height: 1;
             }
@@ -224,6 +224,7 @@ main {
     display: flex;
     gap: 1rem;
 
+    
     img {
         width: 6rem;
         object-fit: cover;
@@ -260,6 +261,10 @@ main {
 
     &:hover {
         
+        img {
+
+        }
+
         .item-content {
             h4 {
                 color: abstracts.$brand-red;
