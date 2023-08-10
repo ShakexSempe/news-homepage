@@ -222,9 +222,8 @@ main {
 
 .bottom-item {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 
-    
     img {
         width: 6rem;
         object-fit: cover;
@@ -260,10 +259,6 @@ main {
     }
 
     &:hover {
-        
-        img {
-
-        }
 
         .item-content {
             h4 {

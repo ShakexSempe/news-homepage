@@ -251,7 +251,7 @@ main {
 
 .bottom-item {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .bottom-item img {
   width: 6rem;
