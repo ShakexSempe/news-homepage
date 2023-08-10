@@ -223,6 +223,9 @@ main {
 .bottom-item {
     display: flex;
     gap: 1.5rem;
+    @include abstracts.xlg {
+        gap: 1rem;
+    }
 
     img {
         width: 6rem;
@@ -252,7 +255,6 @@ main {
         }
         
         p {
-            // padding-right: .5rem;
             color: abstracts.$blue-dark;
             line-height: 1.8;
         }

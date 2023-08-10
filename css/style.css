@@ -253,6 +253,11 @@ main {
   display: flex;
   gap: 1.5rem;
 }
+@media (min-width: 1024px) {
+  .bottom-item {
+    gap: 1rem;
+  }
+}
 .bottom-item img {
   width: 6rem;
   object-fit: cover;
