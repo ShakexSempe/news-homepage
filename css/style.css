@@ -77,10 +77,10 @@ a:hover {
 }
 
 .attribution {
-  padding: 2rem;
-  font-size: 11px;
+  padding: 1rem;
+  font-size: 0.85rem;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.6;
   background: #00001a;
   color: #c5c6ce;
 }
