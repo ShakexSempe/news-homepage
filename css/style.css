@@ -76,6 +76,18 @@ a:hover {
   display: block;
 }
 
+.attribution {
+  padding: 2rem;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.5;
+  background: #00001a;
+  color: #c5c6ce;
+}
+.attribution a {
+  color: #fafafa;
+}
+
 header {
   background: #fafafa;
   display: flex;

@@ -47,6 +47,18 @@ a {
         }
     }
 }
+.attribution {
+    padding: 2rem;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.5;
+    background: abstracts.$blue-darkest;
+    color: abstracts.$blue-light;
+
+    a {
+        color: #fafafa;
+    }
+}
 
 
 
