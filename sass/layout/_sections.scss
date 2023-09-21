@@ -1,0 +1,174 @@
+@use '../abstracts';
+
+main {
+    margin: 1rem auto;
+}
+
+.top-section {
+    display: grid;
+    gap: 10vh;
+    margin-bottom: 10vh;
+    // DESKTOP
+    @include abstracts.xlg {
+        display: grid;
+        grid-template-columns: 65% auto;
+        margin-bottom: 15vh;
+        gap: 5vw;
+    }
+    .left-section {
+        display: grid;
+        gap: 2rem;
+        @include abstracts.sm {
+            gap: 2rem;
+        }
+
+        img {
+            height: 100%;
+            max-height: 350px;
+        }
+
+        .left-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            @include abstracts.sm {
+            grid-template-columns: auto auto;
+            // border: 3px solid green;
+            }
+            .content-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+                @include abstracts.xlg {
+                    justify-content: space-between;
+                    padding: 0 1rem;
+                }
+
+            }
+            
+
+            h2 {
+                font-size: 2.5rem;
+                font-size: clamp(2.5rem, 4vw, 3.5rem);
+                font-weight: 800;
+                line-height: 1;
+            }
+            
+            p {
+                color: abstracts.$blue-dark;
+                @include abstracts.md {
+                    font-size: 1rem;
+                }
+            }
+
+            .btn {
+                color: #fff;
+                width: 12rem;
+                height: 3rem;
+                display: grid;
+                place-content: center;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: .25rem;
+                font-size: .85rem;
+                padding: 1rem;
+                transition: .25s;
+                position: relative;
+                isolation: isolate;
+                &::before, &:after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: .25s;
+                    z-index: -1;
+                }
+                &::before {
+                    background: abstracts.$brand-red;
+                    box-shadow: 0 .5rem .5rem #0001;
+                }
+                &::after {
+                    background: abstracts.$blue-darkest;
+                    box-shadow: 0 .25rem .25rem #0002;
+                    opacity: 0;
+                }
+                @media (max-width: 768px) {
+                    cursor: default;
+                    &:active {
+                        transform: scale(.98);
+                        letter-spacing: .225rem;
+                        &::before {opacity: 0;}
+                        &::after {opacity: 1;}
+                    }
+                }
+                @media (min-width: 768.1px) {
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(.98);
+                        &::before {opacity: 0;}
+                        &::after {opacity: 1;}
+                    }
+                }
+            }
+
+        }
+    }
+
+    .right-section {
+        // border: 2px solid purple;
+
+        .card {
+            background: abstracts.$blue-darkest;
+            color: #fff;
+            padding: 1rem 1.5rem 1rem 1rem;
+            
+
+            h3 {
+                color: abstracts.$brand-orange;
+                font-size: 2rem;
+                font-size: clamp(2rem, 2.8vw, 3rem);
+            }
+
+            .card-item {
+                padding: 2rem 0;
+                border-bottom: 1px solid #fff6;
+                &:last-child {
+                    border-bottom: none;
+                }
+                @include abstracts.sm {
+                    cursor: pointer;
+                }
+
+                h4 {
+                    font-size: 1.25rem;
+                    margin-bottom: .5rem;
+                    transition: .125s;
+                }
+                p {
+                    font-weight: 400;
+                    color: abstracts.$blue-light;
+                }
+
+                &:hover {
+                    h4 {
+                        color: abstracts.$brand-orange;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}
+
+.bottom-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    @include abstracts.xlg {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
