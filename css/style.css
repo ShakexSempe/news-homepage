@@ -140,6 +140,7 @@ header .toggle {
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
+  transition: 0.25s;
 }
 @media (min-width: 1024px) {
   header .toggle {
@@ -162,6 +163,9 @@ header .toggle.active img.open {
 }
 header .toggle.active img.close {
   opacity: 1;
+}
+header .toggle:active {
+  transform: scale(0.9);
 }
 
 main {

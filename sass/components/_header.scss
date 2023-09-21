@@ -74,6 +74,8 @@ header {
         position: relative;
         width: 2.5rem;
         height: 2.5rem;
+        transition: .25s;
+
         img {
             position: absolute;
             inset: 0;
@@ -85,7 +87,7 @@ header {
                 opacity: 0;
             }
         }
-        
+        // TOGGLE ICONS = .ACTIVE
         &.active {
             img {
                 &.open {
@@ -95,6 +97,11 @@ header {
                     opacity: 1;
                 }
             }
+        }
+
+        // ACTIVE PSEUDO CLASS
+        &:active {
+            transform: scale(.9);
         }
     }
     
