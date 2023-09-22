@@ -129,10 +129,19 @@ header .logo img {
     list-style: none;
   }
   header nav ul li {
+    width: 60%;
+    transform: translateX(2rem);
     font-size: 1.125rem;
+    opacity: 0;
+    transition: 0.5s;
   }
   header nav.active {
     right: -30vw;
+  }
+  header nav.active ul li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(0.0125s + 0.1s * var(--i));
   }
 }
 @media (min-width: 1024px) {
