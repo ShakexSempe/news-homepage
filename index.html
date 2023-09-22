@@ -30,7 +30,7 @@
     <header>
       <div class="logo">
         <a href="#">
-          <img src="assets/images/logo.svg" alt="logo">
+          <img src="assets/images/logo.svg" data-aside alt="logo">
         </a>
       </div>
       <!-- MOBILE SCREENS TOGGLE ELEMENT -->
@@ -41,11 +41,11 @@
       <!-- NAV LIST -->
       <nav>
         <ul>
-          <li style="--i:1;"><a href="">Home</a></li>
-          <li style="--i:2;"><a href="">New</a></li>
-          <li style="--i:3;"><a href="">Popular</a></li>
-          <li style="--i:4;"><a href="">Trending</a></li>
-          <li style="--i:5;"><a href="">Categories</a></li>
+          <li style="--i:1;" data-aside><a href="#main">Home</a></li>
+          <li style="--i:2;" data-aside><a href="#card">New</a></li>
+          <li style="--i:3;" data-aside><a href="#main">Popular</a></li>
+          <li style="--i:4;" data-aside><a href="#footer">Trending</a></li>
+          <li style="--i:5;" data-aside><a href="#footer">Categories</a></li>
         </ul>
       </nav>
     </header>
@@ -81,7 +81,7 @@
 
         <div class="right-section">
 
-          <div class="card">
+          <div id="card" class="card">
             <h3>New</h3>
             <div class="card-item">
               <h4>Hydrogen VS Electric Cars</h4>
@@ -102,7 +102,7 @@
       </div>
       
       <!-- BOTTOM SECTION -->
-      <div class="bottom-section">
+      <div id="footer" class="bottom-section">
 
         <div class="bottom-item">
           <img src="assets/images/image-retro-pcs.jpg" loading="lazy" alt="retro pcs">
