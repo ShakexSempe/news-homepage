@@ -19,6 +19,9 @@ header {
         img {
             width: 2.5rem;
         }
+        &:active {
+            transform: scale(.98);
+        }
     }
 
     nav {
@@ -85,8 +88,8 @@ header {
         }
         // border: 3px solid blue;
         position: relative;
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
         transition: .25s;
 
         img {

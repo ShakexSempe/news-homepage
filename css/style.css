@@ -32,6 +32,7 @@ img {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(10vh + 1rem);
 }
 
 body {
@@ -109,6 +110,9 @@ header {
 header .logo img {
   width: 2.5rem;
 }
+header .logo:active {
+  transform: scale(0.98);
+}
 @media (max-width: 1024px) {
   header nav {
     position: absolute;
@@ -159,8 +163,8 @@ header .logo img {
 header .toggle {
   z-index: 5;
   position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   transition: 0.25s;
 }
 @media (min-width: 1024px) {
