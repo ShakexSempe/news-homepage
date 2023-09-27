@@ -274,6 +274,11 @@ main {
   position: relative;
   isolation: isolate;
 }
+@media (min-width: 576px) {
+  .top-section .left-section .left-content .btn {
+    cursor: pointer;
+  }
+}
 .top-section .left-section .left-content .btn::before, .top-section .left-section .left-content .btn:after {
   content: "";
   position: absolute;
@@ -292,34 +297,15 @@ main {
   box-shadow: 0 0.25rem 0.25rem #0002;
   opacity: 0;
 }
-@media (max-width: 768px) {
-  .top-section .left-section .left-content .btn {
-    cursor: default;
-  }
-  .top-section .left-section .left-content .btn:active {
-    transform: scale(0.98);
-    letter-spacing: 0.225rem;
-  }
-  .top-section .left-section .left-content .btn:active::before {
-    opacity: 0;
-  }
-  .top-section .left-section .left-content .btn:active::after {
-    opacity: 1;
-  }
+.top-section .left-section .left-content .btn:hover::before {
+  opacity: 0;
 }
-@media (min-width: 768.1px) {
-  .top-section .left-section .left-content .btn {
-    cursor: pointer;
-  }
-  .top-section .left-section .left-content .btn:hover {
-    transform: scale(0.98);
-  }
-  .top-section .left-section .left-content .btn:hover::before {
-    opacity: 0;
-  }
-  .top-section .left-section .left-content .btn:hover::after {
-    opacity: 1;
-  }
+.top-section .left-section .left-content .btn:hover::after {
+  opacity: 1;
+}
+.top-section .left-section .left-content .btn:active {
+  transform: scale(0.98);
+  letter-spacing: 0.225rem;
 }
 .top-section .right-section .card {
   background: #00001a;

@@ -80,6 +80,11 @@ main {
                 transition: .25s;
                 position: relative;
                 isolation: isolate;
+                // DESKTOP STYLE
+                @include abstracts.sm {
+                    cursor: pointer;
+                }
+                // PSEUDO BACKGROUND
                 &::before, &:after {
                     content: '';
                     position: absolute;
@@ -98,23 +103,18 @@ main {
                     box-shadow: 0 .25rem .25rem #0002;
                     opacity: 0;
                 }
-                @media (max-width: 768px) {
-                    cursor: default;
-                    &:active {
-                        transform: scale(.98);
-                        letter-spacing: .225rem;
-                        &::before {opacity: 0;}
-                        &::after {opacity: 1;}
-                    }
+                // HOVER CLASS
+                &:hover {
+                    &::before {opacity: 0;}
+                    &::after {opacity: 1;}
                 }
-                @media (min-width: 768.1px) {
-                    cursor: pointer;
-                    &:hover {
-                        transform: scale(.98);
-                        &::before {opacity: 0;}
-                        &::after {opacity: 1;}
-                    }
+                // :ACTIVE CLASS
+                &:active {
+                    transform: scale(.98);
+                    letter-spacing: .225rem;
+                    
                 }
+                
             }
 
         }
