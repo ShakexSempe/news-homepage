@@ -221,6 +221,15 @@ main {
         &:hover {
     
             .item-content {
+                h3 {
+                    animation: .5s click ease-out;
+                    @keyframes click {
+                        50% {
+                            opacity: .8;
+                            letter-spacing: .25rem;
+                        }
+                    }
+                }
                 h4 {
                     color: abstracts.$brand-red;
                 }

@@ -394,6 +394,15 @@ main {
   color: #5d5f79;
   line-height: 1.8;
 }
+.bottom-section .bottom-item:hover .item-content h3 {
+  animation: 0.5s click ease-out;
+}
+@keyframes click {
+  50% {
+    opacity: 0.8;
+    letter-spacing: 0.25rem;
+  }
+}
 .bottom-section .bottom-item:hover .item-content h4 {
   color: #f15e50;
 }
