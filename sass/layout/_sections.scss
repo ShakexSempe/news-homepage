@@ -204,6 +204,13 @@ main {
                 letter-spacing: .025rem;
                 color: abstracts.$blue-light;
                 margin-bottom: .5rem;
+                display: flex;
+                @keyframes click {
+                    50% {
+                        opacity: 0.5;
+                        transform: translateX(0.125rem);
+                    }
+                }
             }
     
             h4 {
@@ -222,12 +229,8 @@ main {
     
             .item-content {
                 h3 {
-                    animation: .5s click ease-out;
-                    @keyframes click {
-                        50% {
-                            opacity: .8;
-                            letter-spacing: .25rem;
-                        }
+                    span {
+                        animation: 300ms click ease-out;
                     }
                 }
                 h4 {
