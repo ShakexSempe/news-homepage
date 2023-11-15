@@ -10,6 +10,7 @@ main {
     display: grid;
     gap: 10vh;
     margin-bottom: 10vh;
+
     // DESKTOP LAYOUT
     @include abstracts.xlg {
         display: grid;
@@ -35,15 +36,17 @@ main {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1rem;
+            
             @include abstracts.sm {
-            grid-template-columns: auto auto;
-            // border: 3px solid green;
+                grid-template-columns: auto auto;
             }
+
             .content-container {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 gap: 1rem;
+                
                 @include abstracts.xlg {
                     justify-content: space-between;
                     padding: 0 1rem;
@@ -61,9 +64,11 @@ main {
             
             p {
                 color: abstracts.$blue-dark;
+
                 @include abstracts.md {
                     font-size: 1rem;
                 }
+
             }
 
             .btn {
@@ -173,6 +178,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+
     @include abstracts.xlg {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -181,6 +187,7 @@ main {
     .bottom-item {
         display: flex;
         gap: 1.5rem;
+
         @include abstracts.xlg {
             gap: 1rem;
         }
@@ -195,9 +202,11 @@ main {
     
         .item-content {
             cursor: pointer;
+            
             @include abstracts.xsm {
                 cursor: default;
             }
+
             h3 {
                 font-size: 2rem;
                 font-weight: 800;
@@ -223,19 +232,23 @@ main {
                 color: abstracts.$blue-dark;
                 line-height: 1.8;
             }
+
         }
     
         &:hover {
     
             .item-content {
+                
                 h3 {
                     span {
                         animation: 300ms click ease-out;
                     }
                 }
+
                 h4 {
                     color: abstracts.$brand-red;
                 }
+
             }
         }
     
