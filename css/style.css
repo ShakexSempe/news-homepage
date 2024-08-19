@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "content";
+  src: url("../../assets/fonts/Inter-VariableFont.ttf") format("ttf");
+  font-weight: 100 1000;
+  font-display: swap;
+}
 .btn-bg::before, .btn-bg::after {
   content: "";
   position: absolute;
@@ -43,6 +49,7 @@ body {
 
 p {
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
 a {

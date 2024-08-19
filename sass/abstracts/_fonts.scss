@@ -1,3 +1,11 @@
 $font-sm: 1rem;
 $font-md:  2rem;
 $font-lg:  2.5rem;
+
+@font-face {
+    font-family: "content";
+    src: 
+    url('../../assets/fonts/Inter-VariableFont.ttf') format('ttf');
+    font-weight: 100 1000;
+    font-display: swap;
+}
