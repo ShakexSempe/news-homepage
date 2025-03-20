@@ -48,6 +48,7 @@ body {
 }
 
 p {
+  font-size: 1rem;
   line-height: 1.8;
   text-wrap: pretty;
 }
@@ -260,11 +261,6 @@ main {
 }
 .top-section .left-section .left-content p {
   color: #5d5f79;
-}
-@media (min-width: 768px) {
-  .top-section .left-section .left-content p {
-    font-size: 1rem;
-  }
 }
 .top-section .left-section .left-content .btn {
   color: #fff;

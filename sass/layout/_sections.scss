@@ -64,11 +64,6 @@ main {
             
             p {
                 color: abstracts.$blue-dark;
-
-                @include abstracts.md {
-                    font-size: 1rem;
-                }
-
             }
 
             .btn {
