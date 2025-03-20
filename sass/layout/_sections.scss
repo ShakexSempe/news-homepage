@@ -164,7 +164,11 @@ main {
 
                 &:last-child {
                     border-bottom: none;
+                    &:after {
+                        display: none;
+                    }
                 }
+
                 @include abstracts.sm {
                     cursor: pointer;
                 }

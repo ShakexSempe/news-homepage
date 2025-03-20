@@ -345,6 +345,9 @@ main {
 .top-section .right-section .card .card-item:last-child {
   border-bottom: none;
 }
+.top-section .right-section .card .card-item:last-child:after {
+  display: none;
+}
 @media (min-width: 576px) {
   .top-section .right-section .card .card-item {
     cursor: pointer;
