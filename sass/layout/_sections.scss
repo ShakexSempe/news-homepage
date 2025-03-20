@@ -209,18 +209,21 @@ main {
                 color: abstracts.$blue-light;
                 margin-bottom: .5rem;
                 display: flex;
+
+                // H3 ANIMATION
                 @keyframes click {
                     50% {
-                        opacity: 0.5;
+                        opacity: 0.25;
                         transform: translateX(0.125rem);
                     }
                 }
+
             }
     
             h4 {
                 font-size: 1.125rem;
                 margin-bottom: 1rem;
-                transition: .125s;
+                transition: 250ms;
             }
             
             p {
@@ -236,7 +239,7 @@ main {
                 
                 h3 {
                     span {
-                        animation: 300ms click ease-out;
+                        animation: 500ms click ease-out;
                     }
                 }
 

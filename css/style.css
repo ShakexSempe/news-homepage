@@ -391,21 +391,21 @@ main {
 }
 @keyframes click {
   50% {
-    opacity: 0.5;
+    opacity: 0.25;
     transform: translateX(0.125rem);
   }
 }
 .bottom-section .bottom-item .item-content h4 {
   font-size: 1.125rem;
   margin-bottom: 1rem;
-  transition: 0.125s;
+  transition: 250ms;
 }
 .bottom-section .bottom-item .item-content p {
   color: #5d5f79;
   line-height: 1.8;
 }
 .bottom-section .bottom-item:hover .item-content h3 span {
-  animation: 300ms click ease-out;
+  animation: 500ms click ease-out;
 }
 .bottom-section .bottom-item:hover .item-content h4 {
   color: #f15e50;
