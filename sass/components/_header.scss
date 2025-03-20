@@ -17,7 +17,13 @@ header {
     }
     .logo {
         img {
+            cursor: default;
             width: 2.5rem;
+            
+            @include abstracts.md {
+                cursor: pointer;
+            }
+
         }
         &:active {
             transform: scale(.98);
