@@ -137,7 +137,31 @@ main {
 
             .card-item {
                 padding: 2rem 0;
-                border-bottom: 1px solid #fff6;
+                // border-bottom: 1px solid #fff6;
+
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    background-color: #fff6;
+                    background-color: abstracts.$blue-dark;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 200;
+
+                    // HOVER ANIMATION
+                    @keyframes line-hover {
+                        50% {
+                            scale: .95;
+                            background-color: abstracts.$brand-orange;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+
                 &:last-child {
                     border-bottom: none;
                 }
@@ -148,7 +172,7 @@ main {
                 h4 {
                     font-size: 1.25rem;
                     margin-bottom: .5rem;
-                    transition: .125s;
+                    transition: 250ms;
                 }
                 p {
                     font-weight: 400;
@@ -158,6 +182,10 @@ main {
                 &:hover {
                     h4 {
                         color: abstracts.$brand-orange;
+                    }
+
+                    &::after {
+                        animation: line-hover 500ms linear;
                     }
                 }
             }

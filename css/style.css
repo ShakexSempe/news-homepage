@@ -322,7 +322,25 @@ main {
 }
 .top-section .right-section .card .card-item {
   padding: 2rem 0;
-  border-bottom: 1px solid #fff6;
+  position: relative;
+}
+.top-section .right-section .card .card-item::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #fff6;
+  background-color: #5d5f79;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+}
+@keyframes line-hover {
+  50% {
+    scale: 0.95;
+    background-color: #e9ab53;
+    opacity: 0.5;
+  }
 }
 .top-section .right-section .card .card-item:last-child {
   border-bottom: none;
@@ -335,7 +353,7 @@ main {
 .top-section .right-section .card .card-item h4 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  transition: 0.125s;
+  transition: 250ms;
 }
 .top-section .right-section .card .card-item p {
   font-weight: 400;
@@ -343,6 +361,9 @@ main {
 }
 .top-section .right-section .card .card-item:hover h4 {
   color: #e9ab53;
+}
+.top-section .right-section .card .card-item:hover::after {
+  animation: line-hover 500ms linear;
 }
 
 .bottom-section {
